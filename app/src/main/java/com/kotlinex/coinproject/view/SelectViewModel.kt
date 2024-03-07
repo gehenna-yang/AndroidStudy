@@ -7,6 +7,7 @@ import androidx.lifecycle.viewModelScope
 import com.google.gson.Gson
 import com.kotlinex.coinproject.datamodel.Coin
 import com.kotlinex.coinproject.datamodel.CoinList
+import com.kotlinex.coinproject.datastore.MyDataStore
 import com.kotlinex.coinproject.repository.NetworkRepository
 import kotlinx.coroutines.launch
 import timber.log.Timber
@@ -43,6 +44,10 @@ class SelectViewModel : ViewModel() {
         }
 
         _coinListResult.value = coinListResult
+    }
+
+    fun setUpFirstFlag() = viewModelScope.launch {
+        MyDataStore().setupFirstData()
     }
 
 }
