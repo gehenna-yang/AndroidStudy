@@ -3,11 +3,13 @@ package com.kotlinex.coinproject.view.intro
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.activity.viewModels
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.lifecycle.Observer
 import com.kotlinex.coinproject.MainActivity
 import com.kotlinex.coinproject.R
+import com.kotlinex.coinproject.databinding.ActivityIntroBinding
 import timber.log.Timber
 
 
@@ -16,11 +18,13 @@ import timber.log.Timber
 
 class IntroActivity : AppCompatActivity() {
 
+    private lateinit var binding : ActivityIntroBinding
     private val viewModel : IntroViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         installSplashScreen()
         super.onCreate(savedInstanceState)
+        binding = ActivityIntroBinding.inflate(layoutInflater)
         setContentView(R.layout.activity_intro)
 
         Timber.d("onCreate")
@@ -33,6 +37,8 @@ class IntroActivity : AppCompatActivity() {
                 startActivity(intent)
             } else {
                 // 처음 접속
+                binding.animationView.visibility = View.INVISIBLE
+                binding.fragmentContainerView.visibility = View.VISIBLE
             }
         })
     }
