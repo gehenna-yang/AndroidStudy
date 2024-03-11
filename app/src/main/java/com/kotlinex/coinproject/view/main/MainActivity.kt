@@ -1,8 +1,8 @@
-package com.kotlinex.coinproject
+package com.kotlinex.coinproject.view.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
+import com.kotlinex.coinproject.R
 import timber.log.Timber
 
 class MainActivity : AppCompatActivity() {

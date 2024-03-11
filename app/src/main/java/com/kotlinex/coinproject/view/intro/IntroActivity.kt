@@ -7,7 +7,7 @@ import android.view.View
 import androidx.activity.viewModels
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.lifecycle.Observer
-import com.kotlinex.coinproject.MainActivity
+import com.kotlinex.coinproject.view.main.MainActivity
 import com.kotlinex.coinproject.R
 import com.kotlinex.coinproject.databinding.ActivityIntroBinding
 import timber.log.Timber
