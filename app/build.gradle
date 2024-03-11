@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -63,4 +64,12 @@ dependencies {
     implementation "androidx.datastore:datastore-preferences:1.0.0"
     // animation - lottie
     implementation "com.airbnb.android:lottie:3.4.0"
+    // room
+    def roomVersion = "2.4.1"
+    implementation("androidx.room:room-runtime:$roomVersion")
+    annotationProcessor("androidx.room:room-compiler:$roomVersion")
+    kapt("androidx.room:room-compiler:$roomVersion")
+    implementation("androidx.room:room-ktx:$roomVersion")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.7.0")
+
 }
