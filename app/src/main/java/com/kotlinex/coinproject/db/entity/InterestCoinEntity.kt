@@ -19,5 +19,5 @@ data class InterestCoinEntity(
     val acc_trade_value_24H: String,
     val fluctate_24H: String,
     val fluctate_rate_24H: String,
-    val selected : Boolean
+    var selected : Boolean
 )
