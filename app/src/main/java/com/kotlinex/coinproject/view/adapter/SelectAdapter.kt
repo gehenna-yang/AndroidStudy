@@ -43,6 +43,12 @@ class SelectAdapter (val context: Context, val coinlist: List<CoinList>):
         val likeImg = holder.likeImage
         val cc = coinlist[position].coinName
 
+        if(selectedCoinList.contains(cc)){
+            likeImg.setImageResource(R.drawable.like_red)
+        } else {
+            likeImg.setImageResource(R.drawable.like_grey)
+        }
+
         likeImg.setOnClickListener {
             if(selectedCoinList.contains(cc)) {
                 selectedCoinList.remove(cc)
