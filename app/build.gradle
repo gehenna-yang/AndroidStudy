@@ -52,14 +52,14 @@ dependencies {
     // splash
     implementation 'androidx.core:core-splashscreen:1.0.1'
     // navigation
-    implementation 'androidx.navigation:navigation-fragment-ktx:2.7.7'
-    implementation 'androidx.navigation:navigation-ui-ktx:2.7.7'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
     // retrofit
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
     // coroutine
-    implementation "org.jetbrains.kotlin:kotlinex-coroutines-android:1.6.4"
-    implementation "androidx.lifeycle:lifeycle-runtime-ktx:2.5.1"
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.5.1"
     // datastore
     implementation "androidx.datastore:datastore-preferences:1.0.0"
     // animation - lottie
@@ -70,8 +70,8 @@ dependencies {
     annotationProcessor("androidx.room:room-compiler:$roomVersion")
     kapt("androidx.room:room-compiler:$roomVersion")
     implementation("androidx.room:room-ktx:$roomVersion")
-    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.7.0")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.5.1")
     // work manager
-    implementation("androidx.work:work-runtime-ktx:2.9.0")
+    implementation("androidx.work:work-runtime-ktx:2.7.1")
 
 }

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.lifecycle.Observer
 import com.kotlinex.coinproject.view.main.MainActivity
@@ -23,9 +24,10 @@ class IntroActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         installSplashScreen()
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         super.onCreate(savedInstanceState)
         binding = ActivityIntroBinding.inflate(layoutInflater)
-        setContentView(R.layout.activity_intro)
+        setContentView(binding.root)
 
         Timber.d("onCreate")
 
