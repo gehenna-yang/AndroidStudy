@@ -3,6 +3,7 @@ package com.kotlinex.coinproject.repository
 import com.kotlinex.coinproject.App
 import com.kotlinex.coinproject.db.CoinDatabase
 import com.kotlinex.coinproject.db.entity.InterestCoinEntity
+import com.kotlinex.coinproject.db.entity.SelectedCoinPriceEntity
 
 class DBRepository {
 
@@ -22,4 +23,12 @@ class DBRepository {
 
     // my selected coin data
     fun getSelectedCoinData() = db.interestCoinDAO().getSelectedData()
+
+
+    // coin price
+    fun getAllCoinPrice() = db.selectedCoinDAO().getAllData()
+
+    fun insertCoinPrice(selectedCoinPriceEntity: SelectedCoinPriceEntity) = db.selectedCoinDAO().insert(selectedCoinPriceEntity)
+
+    fun getSelectedCoinPrice(coinName: String) = db.selectedCoinDAO().getOneCoinData(coinName)
 }

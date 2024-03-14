@@ -8,4 +8,6 @@ class NetworkRepository {
     private val client = ApiInstance.getInstance().create(Api::class.java)
 
     suspend fun getCoinList() = client.getCoinList()
+
+    suspend fun getRecentCoinData(coin: String) = client.getRecentCoin(coin)
 }

@@ -51,6 +51,6 @@ class CoinListAdapter(val context: Context, val dataSet : List<InterestCoinEntit
     }
 
     override fun getItemCount(): Int {
-        return 0
+        return dataSet.size
     }
 }

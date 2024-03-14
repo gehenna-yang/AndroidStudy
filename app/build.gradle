@@ -71,5 +71,7 @@ dependencies {
     kapt("androidx.room:room-compiler:$roomVersion")
     implementation("androidx.room:room-ktx:$roomVersion")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.7.0")
+    // work manager
+    implementation("androidx.work:work-runtime-ktx:2.9.0")
 
 }
