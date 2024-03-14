@@ -40,7 +40,7 @@ class PriceForegroundService : Service() {
                 job = CoroutineScope(Dispatchers.Default).launch {
                     while (true) {
                         startForeground(NOTIFICATION_ID, makeNotification())
-                        delay(1000)
+                        delay(2000)
                     }
                 }
             }
@@ -109,6 +109,8 @@ class PriceForegroundService : Service() {
 
     suspend fun getAllCoinList() : ArrayList<CoinList> {
         val result = networkRepository.getCoinList()
+
+        Timber.d("noti???")
 
         val coinListResult = ArrayList<CoinList>()
 

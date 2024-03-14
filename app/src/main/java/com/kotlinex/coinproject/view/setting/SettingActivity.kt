@@ -23,7 +23,7 @@ class SettingActivity : AppCompatActivity() {
 
             val intent = Intent(this, PriceForegroundService::class.java)
             intent.action = "START"
-            startActivity(intent)
+            startService(intent)
         }
 
         binding.stopForeground.setOnClickListener {
@@ -31,7 +31,7 @@ class SettingActivity : AppCompatActivity() {
 
             val intent = Intent(this, PriceForegroundService::class.java)
             intent.action = "STOP"
-            startActivity(intent)
+            startService(intent)
         }
 
     }
